@@ -1,7 +1,6 @@
 {
-  "name": "react-antwind",
+  "name": "cra-template-typescript-antwind",
   "version": "0.1.0",
-  "private": true,
   "main": "template.json",
   "repository": "git@github.com:GeekEast/cra-antwind.git",
   "author": "James Tan <xiang.tan.p2109@gmail.com>",
@@ -67,7 +66,10 @@
     "test": "craco test",
     "analyze": "cross-env REACT_INTERACTIVE_ANALYZE=1 yarn build",
     "eject": "react-scripts eject",
-    "commit": "git add . && npx git-cz"
+    "commit": "git add . && npx git-cz",
+    "clean-files": "rm -rf ./template/public ./template/src && rm -f ./template/README.md ./template/tsconfig.json ./template/craco.config.js ./template/tailwind.config.js",
+    "copy-files": "cp -a ./src/. template/src && cp -a ./public/. template/public && cp tsconfig.json README.md craco.config.js tailwind.config.js template/",
+    "prepublish": "yarn clean-files && yarn copy-files"
   },
   "eslintConfig": {
     "extends": [
