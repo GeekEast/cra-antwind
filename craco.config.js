@@ -1,8 +1,18 @@
 const path = require('path');
+const WebpackBar = require('webpackbar');
 const CracoAntDesignPlugin = require('craco-antd');
 const CracoLessPlugin = require('craco-less');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
+  webpack: {
+    plugins: [
+      new WebpackBar({ profile: true }),
+      ...(process.env.NODE_ENV === 'development'
+        ? [new BundleAnalyzerPlugin({ openAnalyzer: false })]
+        : []),
+    ],
+  },
   style: {
     postcss: {
       plugins: [require('tailwindcss'), require('autoprefixer')],
