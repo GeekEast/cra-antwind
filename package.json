@@ -2,6 +2,40 @@
   "name": "react-antwind",
   "version": "0.1.0",
   "private": true,
+  "main": "template.json",
+  "repository": "git@github.com:GeekEast/cra-antwind.git",
+  "author": "James Tan <xiang.tan.p2109@gmail.com>",
+  "description": "A quick start Create React App template with Antd + Tailwind",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "keywords": [
+    "react",
+    "create-react-app",
+    "cra-template",
+    "template",
+    "typescript",
+    "antd",
+    "tailwind"
+  ],
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "bugs": {
+    "url": "https://github.com/GeekEast/cra-antwind/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest",
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@tailwindcss/postcss7-compat": "^2.1.0",
@@ -32,7 +66,8 @@
     "build": "craco build",
     "test": "craco test",
     "analyze": "cross-env REACT_INTERACTIVE_ANALYZE=1 yarn build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "commit": "git add . && npx git-cz"
   },
   "eslintConfig": {
     "extends": [
@@ -57,8 +92,8 @@
       "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
     ]
   },
-  "main": "index.js",
-  "repository": "git@github.com:GeekEast/cra-antwind.git",
-  "author": "James Tan <xiang.tan.p2109@gmail.com>",
-  "license": "MIT"
+  "devDependencies": {
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0"
+  }
 }
