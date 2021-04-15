@@ -1,7 +1,4 @@
 {
-  "name": "react-antwind",
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@tailwindcss/postcss7-compat": "^2.1.0",
@@ -31,30 +28,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "analyze": "cross-env REACT_INTERACTIVE_ANALYZE=1 yarn build",
+    "analyze": "env REACT_INTERACTIVE_ANALYZE=1 yarn build",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "jest": {
-    "transformIgnorePatterns": [
-      "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
-    ]
   }
 }
