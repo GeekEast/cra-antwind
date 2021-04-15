@@ -56,5 +56,9 @@
     "transformIgnorePatterns": [
       "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:GeekEast/cra-antwind.git",
+  "author": "James Tan <xiang.tan.p2109@gmail.com>",
+  "license": "MIT"
 }
