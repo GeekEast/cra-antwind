@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import day from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+day.extend(relativeTime);
 
 ReactDOM.render(
   <React.StrictMode>

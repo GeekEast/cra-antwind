@@ -1,6 +1,6 @@
 import React, { createElement, useState } from 'react';
 import { Comment, Tooltip, Avatar } from 'antd';
-import moment from 'moment';
+import day from 'dayjs';
 import {
   DislikeOutlined,
   LikeOutlined,
@@ -61,8 +61,8 @@ export const Demo = () => {
         </p>
       }
       datetime={
-        <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-          <span>{moment().fromNow()}</span>
+        <Tooltip title={day().format('YYYY-MM-DD HH:mm:ss')}>
+          <span>{day().fromNow()}</span>
         </Tooltip>
       }
     />
