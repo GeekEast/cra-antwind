@@ -1,6 +1,6 @@
 {
   "name": "cra-template-typescript-antwind",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "template.json",
   "repository": "git@github.com:GeekEast/cra-antwind.git",
   "author": "James Tan <xiang.tan.p2109@gmail.com>",
